@@ -61,7 +61,7 @@ void setup() {
 
 void loop() {
   int number=0;
-  isObstacle = digitalRead(5);
+  isObstacle = digitalRead(5); //Reads data from digital input pin 5 on board(change if input is in different pin)
   if (isObstacle == HIGH)
   {
     Serial.println("OBSTACLE!!, OBSTACLE!!");
