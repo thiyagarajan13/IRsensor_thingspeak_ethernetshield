@@ -19,7 +19,7 @@ byte mac[] = {
 };
 
 // Set the static IP address to use if the DHCP fails to assign
-IPAddress ip(192, 168, 1, 4); //type ipconfig and enter your LAN/WLAN ip address
+IPAddress ip(192, 168, 1, 4); //type ipconfig in cmd and enter your LAN/WLAN ip address
 IPAddress myDns(192, 168, 1, 1); // type ipconfig in cmd and enter your default GATEWAY address here
 
 EthernetClient client;
@@ -74,7 +74,7 @@ void loop() {
   }
   // Write to ThingSpeak. There are up to 8 fields in a channel, allowing you to store up to 8 different
   // pieces of information in a channel.  Here, we write to field 1.
-  int x = ThingSpeak.writeField(myChannelNumber, 3, number, myWriteAPIKey); //mention which field you want to write to
+  int x = ThingSpeak.writeField(myChannelNumber, 1, number, myWriteAPIKey); //mention which field you want to write to
   if(x == 200){
     Serial.println("Channel update successful.");
   }
